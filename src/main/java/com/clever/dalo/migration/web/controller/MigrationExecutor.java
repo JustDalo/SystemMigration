@@ -31,7 +31,7 @@ public class MigrationExecutor {
     private final PatientRepository patientRepository;
     private static final String MIGRATION_DATE_FROM = "2019-09-18";
 
-    @Scheduled(cron = "* * * * * ?")
+    @Scheduled(cron = "0 15 */2 * * ?")
     public void migrate() {
 
         List<OldClientDto> oldClients = webClient.post()
